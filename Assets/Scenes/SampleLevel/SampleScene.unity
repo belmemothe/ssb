@@ -448,7 +448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &232379679
 AudioSource:
   m_ObjectHideFlags: 0
@@ -569,7 +569,7 @@ MonoBehaviour:
   - {fileID: 212913704428063660, guid: 36b474f6dc0328a4b81fa1ef64082bc5, type: 3}
   transitionType: 000000000000000000000000000000000000000000000000000000000000000000000000
   phaseHop: 030000000100000001000000020000000100000001000000020000000100000001000000
-  isTimer: 
+  isTimer: 000000000000000000
   destroyWho:
   - {fileID: 0}
   - {fileID: 0}
@@ -910,7 +910,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2046548038
 MonoBehaviour:
   m_ObjectHideFlags: 0

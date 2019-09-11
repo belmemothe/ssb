@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 11}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 424}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -70,10 +70,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 1121, y: 398}
-  m_MaxSize: {x: 26016, y: 14048}
+  m_MinSize: {x: 1115, y: 374}
+  m_MaxSize: {x: 26010, y: 14024}
   vertical: 0
-  controlID: 51
+  controlID: 177
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -93,8 +93,8 @@ MonoBehaviour:
     y: 655
     width: 1322
     height: 292
-  m_MinSize: {x: 102, y: 124}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -121,10 +121,10 @@ MonoBehaviour:
     y: 0
     width: 1322
     height: 947
-  m_MinSize: {x: 844, y: 398}
-  m_MaxSize: {x: 22014, y: 14048}
+  m_MinSize: {x: 840, y: 374}
+  m_MaxSize: {x: 22010, y: 14024}
   vertical: 1
-  controlID: 52
+  controlID: 145
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -199,10 +199,10 @@ MonoBehaviour:
     y: 0
     width: 1322
     height: 655
-  m_MinSize: {x: 844, y: 274}
-  m_MaxSize: {x: 22014, y: 10024}
+  m_MinSize: {x: 840, y: 274}
+  m_MaxSize: {x: 22010, y: 10024}
   vertical: 0
-  controlID: 53
+  controlID: 125
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 54
+  controlID: 15
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -572,20 +572,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Cinematics/Sample Level/Entracte1
+    - Assets/Scripts/generalLevels
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/Cinematics/Sample Level/Entracte1
+  - Assets/Scripts/generalLevels
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: D:\Categories\Artfx\Unity\Super Scribble Cats\SSB
+  m_LastProjectPath: D:\Categories\Artfx\Unity\Super Scribble Cats\SSB Online\ssb
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 38300000
-    m_LastClickedID: 12344
-    m_ExpandedIDs: 000000005a2600008e260000282700006e2700007c2700000e280000ce280000182900003429000000ca9a3b
+    m_SelectedIDs: d8310000
+    m_LastClickedID: 12760
+    m_ExpandedIDs: 000000008c2f0000b42f0000363000006a30000074300000f43000009c310000da310000f231000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -613,7 +613,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005a26000028270000ea2700001829000034290000
+    m_ExpandedIDs: 000000008c2f0000b42f0000363000006a30000074300000f43000009c310000da310000f2310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -723,9 +723,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 00d0ffff
-      m_LastClickedID: -12288
-      m_ExpandedIDs: b0e9ffff6cf5ffffc6fbffff
+      m_SelectedIDs: 12320000
+      m_LastClickedID: 12818
+      m_ExpandedIDs: 86f0ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

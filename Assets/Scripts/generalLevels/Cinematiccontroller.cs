@@ -84,7 +84,7 @@ public class Cinematiccontroller : MonoBehaviour {
 	void Update ()
     {
 
-        if ((Input.GetMouseButtonDown(0) && Drawingcontroller.cinematicFinished == false && !isTimer[transitionAdvancement]) ^ (freezeTime > waitTime))
+        if ((Input.GetMouseButtonDown(0) && Drawingcontroller.cinematicFinished == false)) // && !isTimer[transitionAdvancement]) ^ (freezeTime > waitTime))
         {
             print("mabite");
             if (transitionAdvancement >= phase.Length)
@@ -160,7 +160,7 @@ public class Cinematiccontroller : MonoBehaviour {
 
         }
 
-        if (isTimer[transitionAdvancement-1])
+        if (isTimer[transitionAdvancement])
         {
             freezeTime += Time.deltaTime;
 

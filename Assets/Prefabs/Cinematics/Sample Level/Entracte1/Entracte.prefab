@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2788152022668270333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2788152022668270335}
+  - component: {fileID: 2788152022668270334}
+  m_Layer: 0
+  m_Name: Entracte
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2788152022668270335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2788152022668270333}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2788152022668270334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2788152022668270333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff80a90f112b9a488e3f05794b7d960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entracte: 0
+  phase:
+  - {fileID: 6010969915675727351, guid: f11ab3ece5d35bf47aa8060ef69246a0, type: 3}
+  - {fileID: 6920145341655881948, guid: 643f3e1fb67bd7747889f2d95b0acc8b, type: 3}
+  transitionType: 0000000000000000
+  phaseHop: 0100000001000000
+  isTimer: 0000
+  destroyWho:
+  - {fileID: 0}
+  - {fileID: 376149158429543548, guid: f11ab3ece5d35bf47aa8060ef69246a0, type: 3}
+  destroyWho2:
+  - {fileID: 0}
+  - {fileID: 0}
+  destroyWho3:
+  - {fileID: 0}
+  - {fileID: 0}
+  clip:
+  - {fileID: 0}
+  - {fileID: 0}
+  audioClipPlay: 000000000000000000000000
+  audioClipStop: 000000000000000000000000
+  popSpeed: 1
+  popScale: {x: 2, y: 2, z: 0}
+  waitTime: 0.5

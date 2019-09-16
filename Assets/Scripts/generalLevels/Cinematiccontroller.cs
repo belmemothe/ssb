@@ -6,6 +6,8 @@ public class Cinematiccontroller : MonoBehaviour {
 
     AudioSource audioSource;
 
+    public bool entracte = false;
+
     public SpriteRenderer[] phase;
     private SpriteRenderer currentSprite;
 
@@ -54,6 +56,8 @@ public class Cinematiccontroller : MonoBehaviour {
     private float freezeTime = 0f;
     public float waitTime = 0.5f;
 
+    private bool thisCinematicDone = false;
+
 	// Use this for initialization
 	void Start () {
         audioSource = GetComponent<AudioSource>();
@@ -79,94 +83,114 @@ public class Cinematiccontroller : MonoBehaviour {
         }
         
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
-
-        if ((Input.GetMouseButtonDown(0) && Drawingcontroller.cinematicFinished == false)) // && !isTimer[transitionAdvancement]) ^ (freezeTime > waitTime))
+        if (!entracte)
         {
-            print("mabite");
-            if (transitionAdvancement >= phase.Length)
+
+
+
+            if ((Input.GetMouseButtonDown(0) && Drawingcontroller.cinematicFinished == false))// && isTimer[transitionAdvancement] == false) ^ (freezeTime > waitTime))
             {
-                GameObject[] names = GameObject.FindGameObjectsWithTag("Cinematic");
-                foreach (GameObject item in names)
+
+                if (transitionAdvancement >= phase.Length)
                 {
-                    Destroy(item);
+
+                    GameObject[] names = GameObject.FindGameObjectsWithTag("Cinematic");
+                    foreach (GameObject item in names)
+                    {
+                        Destroy(item);
+                    }
+                    Drawingcontroller.cinematicFinished = true;
+                    Linedrawing.globalisActive = true;
+                    thisCinematicDone = true;
+                    Destroy(this);
+
+
                 }
-                Drawingcontroller.cinematicFinished = true;
-                Linedrawing.globalisActive = true;
+
+                if (transitionAdvancement < phase.Length)
+                {
+                    if (destroyWho[transitionAdvancement] != null)
+                    {
+                        Destroy(GameObject.Find(destroyWho[transitionAdvancement].name + "(Clone)"));
+                    }
+                    if (destroyWho2[transitionAdvancement] != null)
+                    {
+                        Destroy(GameObject.Find(destroyWho2[transitionAdvancement].name + "(Clone)"));
+                    }
+                    if (destroyWho3[transitionAdvancement] != null)
+                    {
+                        Destroy(GameObject.Find(destroyWho3[transitionAdvancement].name + "(Clone)"));
+                    }
+
+                    if (firstPlay)
+                    {
+
+                        firstPlay = false;
+                        int tempAdv = transitionAdvancement + 1;
+
+                        if (audioClipStop[tempAdv] != 0)
+                        {
+                            audioSource.Stop();
+                        }
+                        if (audioClipPlay[tempAdv] != 0)
+                        {
+                            audioSource.PlayOneShot(clip[audioClipPlay[tempAdv]], 1f);
+                        }
+
+                    }
+                    else
+                    {
+                        if (audioClipStop[transitionAdvancement] != 0)
+                        {
+                            audioSource.Stop();
+                        }
+                        if (audioClipPlay[transitionAdvancement] != 0)
+                        {
+                            audioSource.PlayOneShot(clip[audioClipPlay[transitionAdvancement]], 1f);
+                        }
+                    }
+
+                    for (int i = 0; (transitionAdvancement - phaseAdvancement) < phaseHop[phaseAdvancement]; i++)
+                    {
+
+                        NextPhase(transitionType[transitionAdvancement], phase[transitionAdvancement]);
+                        transitionAdvancement++;
+                    }
+                    phaseAdvancement = transitionAdvancement;
+
+
+
+
+
+
+                }
+
+
 
             }
 
-            if (transitionAdvancement < phase.Length)
+            /*if (!thisCinematicDone)
             {
-                if (destroyWho[transitionAdvancement] != null)
-                {
-                    Destroy(GameObject.Find(destroyWho[transitionAdvancement].name + "(Clone)"));
-                }
-                if (destroyWho2[transitionAdvancement] != null)
-                {
-                    Destroy(GameObject.Find(destroyWho2[transitionAdvancement].name + "(Clone)"));
-                }
-                if (destroyWho3[transitionAdvancement] != null)
-                {
-                    Destroy(GameObject.Find(destroyWho3[transitionAdvancement].name + "(Clone)"));
-                }
 
-                if (firstPlay)
+                if (isTimer[transitionAdvancement])
                 {
-                    //print(transitionAdvancement);
-                    firstPlay = false;
-                    int tempAdv = transitionAdvancement + 1;
-                    
-                    if (audioClipStop[tempAdv] != 0)
-                    {
-                        audioSource.Stop();
-                    }
-                    if (audioClipPlay[tempAdv] != 0)
-                    {
-                        audioSource.PlayOneShot(clip[audioClipPlay[tempAdv]], 1f);
-                    }
-
-                }
-                else
-                {
-                    if (audioClipStop[transitionAdvancement] != 0)
-                    {
-                        audioSource.Stop();
-                    }
-                    if (audioClipPlay[transitionAdvancement] != 0)
-                    {
-                        audioSource.PlayOneShot(clip[audioClipPlay[transitionAdvancement]], 1f);
-                    }
-                }
-                                
-                for (int i = 0; (transitionAdvancement - phaseAdvancement) < phaseHop[phaseAdvancement]; i++)
-                {
-                    NextPhase(transitionType[transitionAdvancement], phase[transitionAdvancement]);
-                    transitionAdvancement++;
-                }
-                phaseAdvancement = transitionAdvancement;
-                //print(transitionAdvancement);
-
                 
-
-                
-
-            }
-            
-          
+                    freezeTime += Time.deltaTime;
+                }
+                */
 
         }
 
-        if (isTimer[transitionAdvancement])
+        if (entracte)
         {
-            freezeTime += Time.deltaTime;
 
         }
-		
-	}
+    }
+
 
 
 
@@ -197,8 +221,7 @@ public class Cinematiccontroller : MonoBehaviour {
 
         //var objectname = GameObject.FindWithTag("CinematicBG");
         //var objectname = GameObject.Find(whichSprite.name+"Clone");
-        //print(objectname.name);
-        print(currentSprite);
+        
 
         while (transitionFinished == false)
         {

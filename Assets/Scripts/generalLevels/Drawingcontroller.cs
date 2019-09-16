@@ -114,6 +114,7 @@ public class Drawingcontroller : MonoBehaviour {
             patternFinished = false;
             transitionDone = false;
             failSafe = true;
+            phaseEnd = false;
 
             //Reset Variables
 
@@ -128,6 +129,7 @@ public class Drawingcontroller : MonoBehaviour {
             phaseEnd = true;
             failSafe = false;
             cinematicFinished = false;
+            patternFinished = true;
             GameObject tempCircle = Instantiate(finishedSprite, new Vector3(0, 0, 0), Quaternion.identity);
             audioSource.pitch = 1.0f;
             audioSource.PlayOneShot(NiceOne, 1.0f);
@@ -138,7 +140,18 @@ public class Drawingcontroller : MonoBehaviour {
             }
 
             Destroy(tempCircle);
-            Instantiate(Entracte1);
+
+            if (patternsPhase == 0 && Entracte1 != null)
+            {
+                Instantiate(Entracte1);
+            }
+            if (patternsPhase == 1 && Entracte2 != null)
+            {
+                Instantiate(Entracte2);
+            }
+            
+            patternsPhase++;
+            patternAdvancement = 0;
             
 
         }

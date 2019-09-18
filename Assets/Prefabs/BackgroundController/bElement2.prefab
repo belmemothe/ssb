@@ -92,8 +92,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 219c689b2d03c4e4cbe7d2dc5220c96c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minScale: {x: 0, y: 0, z: 0}
   maxScale: {x: 1.03, y: 1.03, z: 1}
-  repeatable: 1
-  speed: 10
-  duration: 0.5
-  durationPause: 2.5
+  bpm: 179
+  speed: 1
+  baseValue: 1
+  durationPause: 2
+  havePause: 0

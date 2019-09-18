@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 9384864}
   - component: {fileID: 9384866}
   - component: {fileID: 9384867}
-  - component: {fileID: 9384868}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -159,7 +158,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9384863}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.380827, y: -10.448891, z: 7.7408123}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -183,7 +182,7 @@ MonoBehaviour:
   Validate: {fileID: 8300000, guid: fce0330ab79471f458bb6a40b1112f36, type: 3}
   NiceOne: {fileID: 8300000, guid: 8855fd3389328ee49b0450a02089532a, type: 3}
   Boo: {fileID: 8300000, guid: 18cc1bc78bc29744fbe3d0fe6aca1643, type: 3}
-  finishedSprite: {fileID: 1857945961621548, guid: c914cf667481b034e8104c33a716055d,
+  finishedSprite: {fileID: 5950380788765335200, guid: 90a2108606c93614f8212c35408e8872,
     type: 3}
   defeatSprite: {fileID: 1219814361157346, guid: 61c2f0fc1d25f544a9976590f57c30a4,
     type: 3}
@@ -191,16 +190,17 @@ MonoBehaviour:
   timeLeft: 5
   difficulty: 0.1
   ghostSpeed: 1
-  waitTime: 1
+  waitTime: 0.5
   patternsPhase1:
-  - {fileID: 1001535802979136, guid: d1959cd89faa315478d143cf265a70ad, type: 3}
   - {fileID: 1992785371891286, guid: 702e904439121e2448eb0aaa14f067bc, type: 3}
   patternsPhase2:
   - {fileID: 1992785371891286, guid: 702e904439121e2448eb0aaa14f067bc, type: 3}
+  patternsPhase3:
   - {fileID: 1992785371891286, guid: 702e904439121e2448eb0aaa14f067bc, type: 3}
-  patternsPhase3: []
-  Entracte1: {fileID: 0}
-  Entracte2: {fileID: 0}
+  Entracte1: {fileID: 2788152022668270333, guid: 981e056b223c2d34ea05b983c7f5496c,
+    type: 3}
+  Entracte2: {fileID: 2788152022668270333, guid: 981e056b223c2d34ea05b983c7f5496c,
+    type: 3}
 --- !u!82 &9384867
 AudioSource:
   m_ObjectHideFlags: 0
@@ -297,71 +297,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &9384868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9384863}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ff80a90f112b9a488e3f05794b7d960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  phase:
-  - {fileID: 212433452775750258, guid: 19eda52bab1cdf842ba20d5caf8c3c0c, type: 3}
-  - {fileID: 212013820874566798, guid: b3fb8559f709a4c48983e622394cc7cb, type: 3}
-  - {fileID: 212270864005502776, guid: 5af80a40d1dbeb8488f7b401f2b6da5e, type: 3}
-  - {fileID: 212997821459706836, guid: be6ec2bd58cca2349ba1b0e177d52233, type: 3}
-  - {fileID: 212886012396183406, guid: 8bae6afc4a7212d4c8b0aeace592aa7f, type: 3}
-  - {fileID: 212886313067724636, guid: 995ef6a13e4fc6c4da056358caf1d6c9, type: 3}
-  - {fileID: 212828180185708918, guid: 9ee99f7a7892f274eb98654e25f45af5, type: 3}
-  - {fileID: 212744512155052530, guid: b2a3c66c1691f6349ad14d7bf8eae081, type: 3}
-  - {fileID: 212913704428063660, guid: 36b474f6dc0328a4b81fa1ef64082bc5, type: 3}
-  transitionType: 000000000000000000000000000000000000000000000000000000000000000000000000
-  phaseHop: 030000000100000001000000020000000100000001000000020000000100000001000000
-  isTimer: 
-  destroyWho:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 1503788006435996, guid: b3fb8559f709a4c48983e622394cc7cb, type: 3}
-  - {fileID: 0}
-  - {fileID: 1263386031243680, guid: 8bae6afc4a7212d4c8b0aeace592aa7f, type: 3}
-  - {fileID: 1021629262781368, guid: 19eda52bab1cdf842ba20d5caf8c3c0c, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  destroyWho2:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 1058015755507860, guid: 5af80a40d1dbeb8488f7b401f2b6da5e, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 1928459693679916, guid: be6ec2bd58cca2349ba1b0e177d52233, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  destroyWho3:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 1604248138177768, guid: 995ef6a13e4fc6c4da056358caf1d6c9, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  clip:
-  - {fileID: 0}
-  - {fileID: 8300000, guid: e5cdf0da878c7e3409a6f6b5663fa5c2, type: 3}
-  - {fileID: 8300000, guid: ae902c1e9cdf55245ad25e4198e94896, type: 3}
-  - {fileID: 8300000, guid: e97cb831d9961974f85df9f6d1c560c9, type: 3}
-  audioClipPlay: 000000000000000000000000010000000000000002000000030000000000000000000000
-  audioClipStop: 000000000000000000000000000000000000000001000000000000000000000000000000
-  popSpeed: 1
-  popScale: {x: 2, y: 2, z: 0}
-  waitTime: 0.5
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,7 +383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &232379679
 AudioSource:
   m_ObjectHideFlags: 0
@@ -557,6 +492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff80a90f112b9a488e3f05794b7d960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  entracte: 0
   phase:
   - {fileID: 212433452775750258, guid: 19eda52bab1cdf842ba20d5caf8c3c0c, type: 3}
   - {fileID: 212013820874566798, guid: b3fb8559f709a4c48983e622394cc7cb, type: 3}
@@ -602,10 +538,10 @@ MonoBehaviour:
   - {fileID: 0}
   clip:
   - {fileID: 0}
-  - {fileID: 8300000, guid: e5cdf0da878c7e3409a6f6b5663fa5c2, type: 3}
-  - {fileID: 8300000, guid: ae902c1e9cdf55245ad25e4198e94896, type: 3}
-  - {fileID: 8300000, guid: e97cb831d9961974f85df9f6d1c560c9, type: 3}
-  - {fileID: 8300000, guid: 70889297cb9181c4da9dbc3280905550, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   audioClipPlay: 000000000000000000000000010000000200000003000000000000000000000004000000
   audioClipStop: 000000000000000000000000000000000100000000000000000000000000000000000000
   popSpeed: 1
@@ -701,7 +637,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -919,11 +855,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052861542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1412709796
 GameObject:
@@ -968,70 +904,4 @@ Transform:
   - {fileID: 962845156}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2046548037
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2046548039}
-  - component: {fileID: 2046548038}
-  m_Layer: 0
-  m_Name: Entracte
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &2046548038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046548037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ff80a90f112b9a488e3f05794b7d960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  phase:
-  - {fileID: 6010969915675727351, guid: f11ab3ece5d35bf47aa8060ef69246a0, type: 3}
-  - {fileID: 6920145341655881948, guid: 643f3e1fb67bd7747889f2d95b0acc8b, type: 3}
-  transitionType: 0000000000000000
-  phaseHop: 0100000001000000
-  isTimer: 0000
-  destroyWho:
-  - {fileID: 0}
-  - {fileID: 376149158429543548, guid: f11ab3ece5d35bf47aa8060ef69246a0, type: 3}
-  destroyWho2:
-  - {fileID: 0}
-  - {fileID: 0}
-  destroyWho3:
-  - {fileID: 0}
-  - {fileID: 0}
-  clip:
-  - {fileID: 0}
-  - {fileID: 0}
-  audioClipPlay: 000000000000000000000000
-  audioClipStop: 000000000000000000000000
-  popSpeed: 1
-  popScale: {x: 2, y: 2, z: 0}
-  waitTime: 0.5
---- !u!4 &2046548039
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046548037}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

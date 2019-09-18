@@ -72,15 +72,17 @@ public class Drawingcontroller : MonoBehaviour {
     [Header("Entractes")]
     public GameObject Entracte1;
     public GameObject Entracte2;
+    private GameObject tempCircle;
+    private bool circleSpawned;
+
+    private int score = 0;
 
 
     // Use this for initialization
     void Start() {
 
         audioSource = GetComponent<AudioSource>();
-        originalTimeLeft = timeLeft;
-
-      
+        originalTimeLeft = timeLeft;      
 
     }
 
@@ -124,22 +126,21 @@ public class Drawingcontroller : MonoBehaviour {
 
         }
 
-        if (patternAdvancement >= whichPattern.Length && !phaseEnd)
+        if (cinematicFinished && patternAdvancement >= whichPattern.Length && !phaseEnd)
         {
             phaseEnd = true;
             failSafe = false;
             cinematicFinished = false;
             patternFinished = true;
-            GameObject tempCircle = Instantiate(finishedSprite, new Vector3(0, 0, 0), Quaternion.identity);
-            audioSource.pitch = 1.0f;
-            audioSource.PlayOneShot(NiceOne, 1.0f);
+            
+            
 
             for (float i = 0; i < waitTime; i += Time.deltaTime)
             {
-
             }
 
             Destroy(tempCircle);
+            circleSpawned = false;
 
             if (patternsPhase == 0 && Entracte1 != null)
             {
@@ -292,13 +293,29 @@ public class Drawingcontroller : MonoBehaviour {
 
                 if (patternFinished)
                 {
-                    freezeTime += Time.deltaTime;
+                    freezeTime += Time.deltaTime;                 
 
                     if (freezeTime > waitTime && !transitionDone)
                     {
                         transitionDone = true;
                         freezeTime = 0f;
                         Transition();
+                    }
+
+                    if (freezeTime > waitTime && (patternAdvancement + 1 >= whichPattern.Length && !phaseEnd && !circleSpawned))
+                    {
+                        
+                        circleSpawned = true;
+                        tempCircle = Instantiate(finishedSprite, new Vector3(0, 0, -10), Quaternion.identity);
+                        audioSource.pitch = 1.0f;
+                        audioSource.PlayOneShot(NiceOne, 1.0f);
+                        freezeTime = 0f;
+
+                    }
+
+                    if(freezeTime > waitTime && circleSpawned)
+                    {
+                        cinematicFinished = true;
                     }
                 }
 
@@ -326,7 +343,12 @@ public class Drawingcontroller : MonoBehaviour {
         
         Destroy(GameObject.Find(whichPattern[patternAdvancement].name + "(Clone)"));
         Destroy(ghostObject);
-        cinematicFinished = true;
+        if (!(patternAdvancement + 1 >= whichPattern.Length && !phaseEnd && !circleSpawned))
+        {
+            print("atol"); 
+            cinematicFinished = true;
+        }
+            
         patternAdvancement++;
     }
 

@@ -61,6 +61,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BackgroundController\BackgroundController.cs" />
+    <Compile Include="Assets\Scripts\BackgroundController\ScaleBPM.cs" />
     <Compile Include="Assets\Scripts\Ecran à titre\Transition.cs" />
     <Compile Include="Assets\Scripts\generalLevels\Cinematiccontroller.cs" />
     <Compile Include="Assets\Scripts\generalLevels\Drawingcontroller.cs" />

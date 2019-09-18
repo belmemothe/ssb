@@ -27,11 +27,16 @@ public class Drawingcontroller : MonoBehaviour {
     public AudioClip Validate;
     public AudioClip NiceOne;
     public AudioClip Boo;
+    public AudioClip Yay;
+    public AudioClip EndSong;
 
     [Header("Sprites")]
     public GameObject finishedSprite;
     public GameObject defeatSprite;
     public GameObject ghost;
+    public GameObject endLevelSprite;
+    public GameObject scoreBoardBG;
+    public GameObject scoreBoardText;
 
     [Header("Options")]
     public float timeLeft = 60f;
@@ -60,6 +65,8 @@ public class Drawingcontroller : MonoBehaviour {
        
     public static bool cinematicFinished = false; // is the game currently inside a cinematic ?
 
+    
+
     [Header("Level")]
     public GameObject[] patternsPhase1;
     public GameObject[] patternsPhase2;
@@ -75,14 +82,25 @@ public class Drawingcontroller : MonoBehaviour {
     private GameObject tempCircle;
     private bool circleSpawned;
 
-    private int score = 0;
+    
+
+    //End of Level
+    [Header("Scoreboard Settings")]
+    private float[] gameScore;
+    private float totalGameScore = 0;
+    public float gameMultiplier = 155f;
+    public float endLevelWaitTime = 0.5f;
+    private int scoreBoardPhase = 0;
+    private bool scoreBoardSpawned = false;
+    
 
 
     // Use this for initialization
     void Start() {
 
         audioSource = GetComponent<AudioSource>();
-        originalTimeLeft = timeLeft;      
+        originalTimeLeft = timeLeft;
+        gameScore = new float[3];
 
     }
 
@@ -126,6 +144,8 @@ public class Drawingcontroller : MonoBehaviour {
 
         }
 
+
+        // End of Phase X
         if (cinematicFinished && patternAdvancement >= whichPattern.Length && !phaseEnd)
         {
             phaseEnd = true;
@@ -153,10 +173,49 @@ public class Drawingcontroller : MonoBehaviour {
             
             patternsPhase++;
             patternAdvancement = 0;
+
+            
             
 
         }
 
+        // End of Level
+
+        if (patternsPhase == 3)
+        {
+            failSafe = false;
+            cinematicFinished = false;
+
+            totalGameScore = gameScore[0] + gameScore[1] + gameScore[2];
+
+            if (!scoreBoardSpawned)
+            {
+                scoreBoardSpawned = true;
+                Instantiate(scoreBoardBG);
+                Instantiate(scoreBoardText);
+                audioSource.PlayOneShot(EndSong, 1.0f);
+
+            }
+            
+
+            freezeTime += Time.deltaTime;
+
+            if (freezeTime >= endLevelWaitTime)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    SceneManager.LoadScene("Menu");
+
+                }
+            }
+
+
+
+
+        }
+
+
+        // Defeat
         if (defeat && !phaseEnd)
         {
             phaseEnd = true;
@@ -306,9 +365,20 @@ public class Drawingcontroller : MonoBehaviour {
                     {
                         
                         circleSpawned = true;
-                        tempCircle = Instantiate(finishedSprite, new Vector3(0, 0, -10), Quaternion.identity);
-                        audioSource.pitch = 1.0f;
-                        audioSource.PlayOneShot(NiceOne, 1.0f);
+                        if ( patternsPhase < 2)
+                        {
+                            tempCircle = Instantiate(finishedSprite, new Vector3(0, 0, -10), Quaternion.identity);
+                            audioSource.pitch = 1.0f;
+                            audioSource.PlayOneShot(NiceOne, 1.0f);
+                        }
+                        if ( patternsPhase == 2)
+                        {
+                            waitTime = 2f;
+                            tempCircle = Instantiate(endLevelSprite, new Vector3(0, 0, -10), Quaternion.identity);
+                            audioSource.pitch = 1.0f;
+                            audioSource.PlayOneShot(Yay, 1.0f);
+                        }
+                        
                         freezeTime = 0f;
 
                     }
@@ -340,12 +410,11 @@ public class Drawingcontroller : MonoBehaviour {
     ///////////// Pattern Transition //////////
     public void Transition()
     {
-        
+        gameScore[patternsPhase] += Mathf.Round(gameMultiplier * (globalTimeLeft / originalTimeLeft));
         Destroy(GameObject.Find(whichPattern[patternAdvancement].name + "(Clone)"));
         Destroy(ghostObject);
         if (!(patternAdvancement + 1 >= whichPattern.Length && !phaseEnd && !circleSpawned))
         {
-            print("atol"); 
             cinematicFinished = true;
         }
             

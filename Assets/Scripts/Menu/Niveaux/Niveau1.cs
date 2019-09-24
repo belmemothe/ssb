@@ -7,7 +7,8 @@ public class Niveau1 : MonoBehaviour
 {
     IEnumerator LoadYourAsyncScene()
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleScene");
+        //AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleScene");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Niveau Arthur");
 
         while (!asyncLoad.isDone)
         {

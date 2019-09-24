@@ -201,6 +201,7 @@ MonoBehaviour:
   ghostSpeed: 1
   waitTime: 0.5
   patternsPhase1:
+  - {fileID: 1001535802979136, guid: d1959cd89faa315478d143cf265a70ad, type: 3}
   - {fileID: 1992785371891286, guid: 702e904439121e2448eb0aaa14f067bc, type: 3}
   patternsPhase2:
   - {fileID: 1992785371891286, guid: 702e904439121e2448eb0aaa14f067bc, type: 3}
@@ -836,36 +837,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Background1: {fileID: 9132358016705934251, guid: 3378fc3fcccbd7749bd52558a3ab74ae,
     type: 3}
+  background1OffsetX: 0
+  background1OffsetY: 0
   Background2: {fileID: 0}
+  background2OffsetX: 0
+  background2OffsetY: 0
   Background3: {fileID: 0}
+  background3OffsetX: 0
+  background3OffsetY: 0
   BackgroundElement1: {fileID: 1116130974607681254, guid: 6454133e391490140bc8db4d27d71acf,
     type: 3}
+  backgroundElement1OffsetX: 0
+  backgroundElement1OffsetY: 0
   BackgroundElement2: {fileID: 7927598176545093250, guid: 4b5843b5e9a990e4e9b6bfd8d4b60bb8,
     type: 3}
+  backgroundElement2OffsetX: 0
+  backgroundElement2OffsetY: 0
   BackgroundElement3: {fileID: 3085720510187998614, guid: f222e894979a0bb49af5a9ba33016b93,
     type: 3}
+  backgroundElement3OffsetX: 0
+  backgroundElement3OffsetY: 0
   BackgroundElement4: {fileID: 3465621352478688528, guid: 7bd07321846e6ac41a9be75f4e12ff81,
     type: 3}
+  backgroundElement4OffsetX: 0
+  backgroundElement4OffsetY: 0
   BackgroundElement5: {fileID: 2779702876374624218, guid: c31b402f4a8f9fe47b888fe4a6a7ac66,
     type: 3}
+  backgroundElement5OffsetX: 0
+  backgroundElement5OffsetY: 0
   MiddlegoundElement1: {fileID: 5851673768446058193, guid: d86cf2792d61e4d43a8b495ab3e0eb62,
     type: 3}
+  MiddlegoundElement1OffsetX: 0
+  MiddlegoundElement1OffsetY: 0
   MiddlegoundElement2: {fileID: 1382818414333703842, guid: c6799e65cb58eed418b85653fa313e58,
     type: 3}
+  MiddlegoundElement2OffsetX: 0
+  MiddlegoundElement2OffsetY: 0
   MiddlegoundElement3: {fileID: 3333062673965153661, guid: dbbb7ce7e15e1ac4b902a8c02c792282,
     type: 3}
+  MiddlegoundElement3OffsetX: 0
+  MiddlegoundElement3OffsetY: 0
   Foreground: {fileID: 6953179783272560835, guid: aef52cf43c639a74e830977d56338296,
     type: 3}
+  ForegroundOffsetX: 0
+  ForegroundOffsetY: 0
   ForegroundElement1: {fileID: 3299197992862969823, guid: 391be3481c78a3a4cbf1385b1e68fbfd,
     type: 3}
+  ForegroundElement1OffsetX: 0
+  ForegroundElement1OffsetY: 0
   ForegroundElement2: {fileID: 6835532711690809015, guid: 8b203c14146f678479dcb52a57fae8ff,
     type: 3}
+  ForegroundElement2OffsetX: 0
+  ForegroundElement2OffsetY: 0
   ForegroundElement3: {fileID: 979858629316246641, guid: 98e7f06b8423c4545ad68b0bd22d5869,
     type: 3}
+  ForegroundElement3OffsetX: 0
+  ForegroundElement3OffsetY: 0
   ForegroundElement4: {fileID: 4567707766672088992, guid: a739ba1837604a74baa896265636d35b,
     type: 3}
+  ForegroundElement4OffsetX: 0
+  ForegroundElement4OffsetY: 0
   ForegroundElement5: {fileID: 531959836248439267, guid: eabef2f5eeae9664b986fc037f06fdb0,
     type: 3}
+  ForegroundElement5OffsetX: 0
+  ForegroundElement5OffsetY: 0
 --- !u!4 &1052861544
 Transform:
   m_ObjectHideFlags: 0

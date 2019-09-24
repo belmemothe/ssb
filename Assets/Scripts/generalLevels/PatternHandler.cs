@@ -31,7 +31,7 @@ public class PatternHandler : MonoBehaviour {
         if (dotCreator < dotsSize)
         {
 
-            var newDot = Instantiate(dot, dots[dotCreator], Quaternion.identity);
+            var newDot = Instantiate(dot, new Vector3(dots[dotCreator].x, dots[dotCreator].y, -5), Quaternion.identity);
             newDot.gameObject.name = "Dot" + dotCreator + "";
 
             if (dotCreator == dotsSize - 1)

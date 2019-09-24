@@ -14,8 +14,10 @@ public class ScaleBPM : MonoBehaviour
     public float baseValue = 1;
     //le temps ou il ne bouge pas en position dégonfler
     public int durationPause = 2;
-    public bool havePause = true;
+    public bool havePause = false;
     bool state = false;
+
+    private bool isStarted = false;
     void Start()
     {
         //Debug.Log(minScale);
@@ -27,13 +29,19 @@ public class ScaleBPM : MonoBehaviour
     {
         //cos((t * pi * (s / 60)) mod pi)
         //float baseValue = Mathf.Cos(((Time.time * Mathf.PI) * (bpm / 60f)) % Mathf.PI);
+        if (Sc_MusicController.gameStart == true && isStarted == false)
+        {
+            isStarted = true;
+            StartCoroutine(PauseLOL());
+        }
+            
 
     }
 
     public IEnumerator PauseLOL()
     {
-        Debug.Log("ENTER ENTER MISSION");
-        while (true)
+        //Debug.Log("ENTER ENTER MISSION");
+        while (Sc_MusicController.gameStopped == false && Sc_MusicController.gameStart == true)
         {
            //décocher le bool havePause pour ne pas utiliser ce if
             if (transform.localScale == minScale && !state && havePause)
@@ -60,6 +68,15 @@ public class ScaleBPM : MonoBehaviour
                 state = false;
             }
         }
+        while(Sc_MusicController.gameStopped == true && minScale.magnitude < maxScale.magnitude)
+        {
+            maxScale -= new Vector3(0.001f,0.001f,0);
+            baseValue = Mathf.Sin((Time.time * Mathf.PI) * (bpm * 2 / 60f)) * speed;
+            transform.localScale = Vector3.Lerp(minScale, maxScale, baseValue);
+            yield return null;
+        }
+
+        yield return null;
     }
     /* Ce code est vieux et ne doit pas être utiliser
     IEnumerator Start ()

@@ -65,6 +65,7 @@ public class Drawingcontroller : MonoBehaviour {
        
     public static bool cinematicFinished = false; // is the game currently inside a cinematic ?
 
+
     
 
     [Header("Level")]
@@ -91,7 +92,7 @@ public class Drawingcontroller : MonoBehaviour {
     public float gameMultiplier = 155f;
     public float endLevelWaitTime = 0.5f;
     private int scoreBoardPhase = 0;
-    private bool scoreBoardSpawned = false;
+    public static bool scoreBoardSpawned = false;
     
 
 
@@ -129,8 +130,8 @@ public class Drawingcontroller : MonoBehaviour {
         if (cinematicFinished && patternFinished && (patternAdvancement < whichPattern.Length))
         {
             
-            Instantiate(whichPattern[patternAdvancement], new Vector3(0, 0, 0), Quaternion.identity);
-            ghostObject = Instantiate(ghost, new Vector3(0, 0, 0), Quaternion.identity);
+            Instantiate(whichPattern[patternAdvancement]);
+            ghostObject = Instantiate(ghost, new Vector3(0, 0, -5), Quaternion.identity);
             patternFinished = false;
             transitionDone = false;
             failSafe = true;
@@ -222,8 +223,9 @@ public class Drawingcontroller : MonoBehaviour {
             GameObject.Find(whichPattern[patternAdvancement].name + "(Clone)").GetComponent<PatternHandler>().DotDestroy();
             Instantiate(defeatSprite, new Vector3(0, 0, 0), Quaternion.identity);
             audioSource.pitch = 1.0f;
-            audioSource.PlayOneShot(Boo, 1.0f);
+            //audioSource.PlayOneShot(Boo, 1.0f);
             Destroy(ghostObject);
+            Sc_MusicController.gameStop = true;
         }
     }
 
@@ -242,22 +244,24 @@ public class Drawingcontroller : MonoBehaviour {
 
                 if (GameObject.Find("Dot" + dotProgression + "") != null && GameObject.Find("Dot" + dotProgressionPlus + "") != null)
                 {
-                    if (dotProgression == 0 || dotProgression > 2)
+                    if (dotProgression == 0 || dotProgression >= success)
                     {
-                        currentDotPos = GameObject.Find("Dot" + dotProgression + "").transform.position;
+                        currentDotPos = GameObject.Find("Dot" + dotProgression + "").transform.position;                        
                         nextDotPos = GameObject.Find("Dot" + dotProgressionPlus + "").transform.position;
                     }
-                    if (dotProgression > 0 && dotProgression < 3)
+                    if (dotProgression > 0 && dotProgression < success)
                     {
                         currentDotPos = GameObject.Find("Dot" + dotProgressionMoins + "").transform.position;
-                        nextDotPos = GameObject.Find("Dot" + dotProgression + "").transform.position;
+                        nextDotPos = GameObject.Find("Dot" + dotProgressionPlus + "").transform.position;
                     }
+                    
                 }
                 else
                 {
-                    currentDotPos = new Vector3(2, 2, 2);
-                    nextDotPos = new Vector3(0, 0, 0);
+                    currentDotPos = new Vector3(2, 2, -5);
+                    nextDotPos = new Vector3(0, 0, -5);
                 }
+
 
                 //////////////////////// Ghost ////////////////////////
 

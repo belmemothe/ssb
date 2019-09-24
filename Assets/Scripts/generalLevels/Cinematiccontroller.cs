@@ -108,6 +108,12 @@ public class Cinematiccontroller : MonoBehaviour {
                     thisCinematicDone = true;
                     Destroy(this);
 
+                    if (Sc_MusicController.gameStarted == false)
+                    {
+                        Sc_MusicController.gameStart = true;
+                    }
+                    
+
 
                 }
 

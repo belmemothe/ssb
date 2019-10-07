@@ -252,7 +252,7 @@ public class Drawingcontroller : MonoBehaviour {
                     if (dotProgression > 0 && dotProgression < success)
                     {
                         currentDotPos = GameObject.Find("Dot" + dotProgressionMoins + "").transform.position;
-                        nextDotPos = GameObject.Find("Dot" + dotProgressionPlus + "").transform.position;
+                        nextDotPos = GameObject.Find("Dot" + dotProgression + "").transform.position;
                     }
                     
                 }

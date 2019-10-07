@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1556617585333300494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6811087478308919318}
+  - component: {fileID: 5391740133950507484}
+  m_Layer: 0
+  m_Name: Entracte 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6811087478308919318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556617585333300494}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.46516657, y: 0.5473047, z: 0.04480418}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5391740133950507484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556617585333300494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff80a90f112b9a488e3f05794b7d960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entracte: 0
+  phase:
+  - {fileID: 2859261962106309012, guid: fe786608f395eaa4b8d6114a7a30fb11, type: 3}
+  - {fileID: 2829624196452187404, guid: 47d7037696558964d98901e5d4a36fae, type: 3}
+  - {fileID: 8626908698434362669, guid: 72002945c8a60dc46a8b620862b7a781, type: 3}
+  - {fileID: 8556210922503659042, guid: afd3a398f56fa7342a9e6e1e9ed72dda, type: 3}
+  - {fileID: 8052630541335087256, guid: 025ce3fd9f987f547859fabbbc6d0fc9, type: 3}
+  - {fileID: 2279644093919836993, guid: 20b6c54e468574b429c0703102422ed2, type: 3}
+  - {fileID: 421301315505828135, guid: 4e14d55cc4e5a17468ee23a44e86799f, type: 3}
+  transitionType: 00000000000000000000000000000000000000000000000000000000
+  phaseHop: 01000000010000000100000001000000010000000100000001000000
+  isTimer: 00000000000000
+  destroyWho:
+  - {fileID: 0}
+  - {fileID: 900026414414132972, guid: fe786608f395eaa4b8d6114a7a30fb11, type: 3}
+  - {fileID: 7014358257561499140, guid: 47d7037696558964d98901e5d4a36fae, type: 3}
+  - {fileID: 8090940970620650734, guid: 72002945c8a60dc46a8b620862b7a781, type: 3}
+  - {fileID: 5554839523926690268, guid: afd3a398f56fa7342a9e6e1e9ed72dda, type: 3}
+  - {fileID: 3545672063525784668, guid: 025ce3fd9f987f547859fabbbc6d0fc9, type: 3}
+  - {fileID: 4065697699547892013, guid: 20b6c54e468574b429c0703102422ed2, type: 3}
+  destroyWho2:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  destroyWho3:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  clip:
+  - {fileID: 0}
+  audioClipPlay: 00000000000000000000000000000000000000000000000000000000
+  audioClipStop: 00000000000000000000000000000000000000000000000000000000
+  popSpeed: 1
+  popScale: {x: 2, y: 2, z: 0}
+  waitTime: 0.5

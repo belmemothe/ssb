@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3912358152401639455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3912358152401639441}
+  - component: {fileID: 3912358152401639454}
+  m_Layer: 0
+  m_Name: BackgroundController
+  m_TagString: bg1
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3912358152401639441
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3912358152401639455}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3912358152401639454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3912358152401639455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ca0679bf733164db0d96fa84b0a978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Background1: {fileID: 5953717744023609527, guid: d1b30ab63cbbb744aa29ae6668394677,
+    type: 3}
+  background1OffsetX: 0
+  background1OffsetY: 0
+  Background2: {fileID: 0}
+  background2OffsetX: 0
+  background2OffsetY: 0
+  Background3: {fileID: 0}
+  background3OffsetX: 0
+  background3OffsetY: 0
+  BackgroundElement1: {fileID: 0}
+  backgroundElement1OffsetX: 0
+  backgroundElement1OffsetY: 0
+  BackgroundElement2: {fileID: 853937731108740208, guid: 250b32dd76d2d6d4983caecca43f7183,
+    type: 3}
+  backgroundElement2OffsetX: 0
+  backgroundElement2OffsetY: 0
+  BackgroundElement3: {fileID: 0}
+  backgroundElement3OffsetX: 0
+  backgroundElement3OffsetY: 0
+  BackgroundElement4: {fileID: 5127291121183933328, guid: 6244573db7ce738449daa346c966180c,
+    type: 3}
+  backgroundElement4OffsetX: 1
+  backgroundElement4OffsetY: 2
+  BackgroundElement5: {fileID: 0}
+  backgroundElement5OffsetX: 0
+  backgroundElement5OffsetY: 0
+  MiddlegoundElement1: {fileID: 6477716686668508029, guid: 9fc7b3c1106d5b24db059b14d387f645,
+    type: 3}
+  MiddlegoundElement1OffsetX: 0.8
+  MiddlegoundElement1OffsetY: -1.8
+  MiddlegoundElement2: {fileID: 0}
+  MiddlegoundElement2OffsetX: 0
+  MiddlegoundElement2OffsetY: 0
+  MiddlegoundElement3: {fileID: 4902140602249314707, guid: 19855acccb21aae4db6301271797b523,
+    type: 3}
+  MiddlegoundElement3OffsetX: 0
+  MiddlegoundElement3OffsetY: -1.8
+  Foreground: {fileID: 3922130891831791542, guid: 432ac1721f5d49747a0c6d3ef60fc4fd,
+    type: 3}
+  ForegroundOffsetX: 0
+  ForegroundOffsetY: 0
+  ForegroundElement1: {fileID: 3108083535596821764, guid: 77cccb266357ea844b84a8f99bae66f9,
+    type: 3}
+  ForegroundElement1OffsetX: 1
+  ForegroundElement1OffsetY: 0
+  ForegroundElement2: {fileID: 0}
+  ForegroundElement2OffsetX: 0
+  ForegroundElement2OffsetY: 0
+  ForegroundElement3: {fileID: 0}
+  ForegroundElement3OffsetX: 0
+  ForegroundElement3OffsetY: 0
+  ForegroundElement4: {fileID: 7308673128133636142, guid: 9328133267262144fa6e724fe2dc162a,
+    type: 3}
+  ForegroundElement4OffsetX: 0
+  ForegroundElement4OffsetY: -0.5
+  ForegroundElement5: {fileID: 0}
+  ForegroundElement5OffsetX: 0
+  ForegroundElement5OffsetY: 0

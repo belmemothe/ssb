@@ -53,13 +53,25 @@ public class Sc_MusicController : MonoBehaviour
                 audioSource.Stop();
                 audioSource.pitch = 1f;
                 audioSource.PlayOneShot(boo, 1.0f);
+                Drawingcontroller.menuBack = true;
+                ResetTransition();
             }
         }
 
         if (Drawingcontroller.scoreBoardSpawned)
         {
             audioSource.Stop();
+            ResetTransition();
         }
 
     }
+
+    public void ResetTransition()
+    {
+        gameStart = false;
+        gameStarted = false;
+
+        gameStopped = false;
+        gameStop = false;
+    }   
 }

@@ -60,6 +60,7 @@ public class Drawingcontroller : MonoBehaviour {
     private bool transitionDone = false; // has the Transition() function been procced
     private bool phaseEnd = false; // did the player finish phase x
     private bool defeat = false; // did the player lose
+    public static bool menuBack = false;
 
     private bool failSafe = false; 
        
@@ -83,6 +84,10 @@ public class Drawingcontroller : MonoBehaviour {
     private GameObject tempCircle;
     private bool circleSpawned;
 
+
+    [Header("Backgrounds")]
+    public GameObject bg2;
+    public GameObject bg3;
     
 
     //End of Level
@@ -166,10 +171,22 @@ public class Drawingcontroller : MonoBehaviour {
             if (patternsPhase == 0 && Entracte1 != null)
             {
                 Instantiate(Entracte1);
+                GameObject[] names = GameObject.FindGameObjectsWithTag("bg1");
+                foreach (GameObject item in names)
+                {
+                    Destroy(item);
+                }
+                Instantiate(bg2);
             }
             if (patternsPhase == 1 && Entracte2 != null)
             {
                 Instantiate(Entracte2);
+                GameObject[] names = GameObject.FindGameObjectsWithTag("bg2");
+                foreach (GameObject item in names)
+                {
+                    Destroy(item);
+                }
+                Instantiate(bg3);
             }
             
             patternsPhase++;
@@ -205,7 +222,11 @@ public class Drawingcontroller : MonoBehaviour {
             {
                 if (Input.GetMouseButtonDown(0))
                 {
+
+                    ResetTransition();
+                    SceneManager.UnloadSceneAsync("Niveau Arthur");
                     SceneManager.LoadScene("Menu");
+                    
 
                 }
             }
@@ -226,6 +247,13 @@ public class Drawingcontroller : MonoBehaviour {
             //audioSource.PlayOneShot(Boo, 1.0f);
             Destroy(ghostObject);
             Sc_MusicController.gameStop = true;
+        }
+
+        if (phaseEnd && menuBack)
+        {
+            ResetTransition();
+            SceneManager.UnloadSceneAsync("Niveau Arthur");
+            SceneManager.LoadScene("Menu");
         }
     }
 
@@ -423,6 +451,17 @@ public class Drawingcontroller : MonoBehaviour {
         }
             
         patternAdvancement++;
+    }
+
+    public void ResetTransition()
+    {
+        successProgression = 0;
+        dotProgression = 0;
+        globalTimeLeft = 0f;
+        menuBack = false;
+        cinematicFinished = false;
+        patternsPhase = 0;
+        scoreBoardSpawned = false;
     }
 
 }

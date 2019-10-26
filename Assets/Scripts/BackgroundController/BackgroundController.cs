@@ -119,7 +119,7 @@ public class BackgroundController : MonoBehaviour
         }
         if (ForegroundElement2 != null)
         {
-            Instantiate(ForegroundElement2, new Vector3(-2 + ForegroundElement2OffsetX, -7 + ForegroundElement2OffsetY, -0.1f), Quaternion.identity);
+            Instantiate(ForegroundElement2, new Vector3(-2 + ForegroundElement2OffsetX, -7 + ForegroundElement2OffsetY, -0.2f), Quaternion.identity);
         }
         if (ForegroundElement3 != null)
         {
@@ -127,7 +127,7 @@ public class BackgroundController : MonoBehaviour
         }
         if (ForegroundElement4 != null)
         {
-            Instantiate(ForegroundElement4, new Vector3(2 + ForegroundElement4OffsetX, -7 + ForegroundElement4OffsetY, -0.1f), Quaternion.identity);
+            Instantiate(ForegroundElement4, new Vector3(2 + ForegroundElement4OffsetX, -7 + ForegroundElement4OffsetY, -0.2f), Quaternion.identity);
         }
         if (ForegroundElement5 != null)
         {

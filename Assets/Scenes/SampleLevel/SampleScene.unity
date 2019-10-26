@@ -558,10 +558,10 @@ MonoBehaviour:
   - {fileID: 0}
   clip:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: e5cdf0da878c7e3409a6f6b5663fa5c2, type: 3}
+  - {fileID: 8300000, guid: ae902c1e9cdf55245ad25e4198e94896, type: 3}
+  - {fileID: 8300000, guid: e97cb831d9961974f85df9f6d1c560c9, type: 3}
+  - {fileID: 8300000, guid: 70889297cb9181c4da9dbc3280905550, type: 3}
   audioClipPlay: 000000000000000000000000010000000200000003000000000000000000000004000000
   audioClipStop: 000000000000000000000000000000000100000000000000000000000000000000000000
   popSpeed: 1

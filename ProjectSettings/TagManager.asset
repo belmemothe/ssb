@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Pattern
   - Cinematic
+  - bg1
+  - bg2
   layers:
   - Default
   - TransparentFX

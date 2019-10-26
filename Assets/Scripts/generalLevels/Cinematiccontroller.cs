@@ -107,6 +107,7 @@ public class Cinematiccontroller : MonoBehaviour {
                     Linedrawing.globalisActive = true;
                     thisCinematicDone = true;
                     Destroy(this);
+                    audioSource.Stop();
 
                     if (Sc_MusicController.gameStarted == false)
                     {

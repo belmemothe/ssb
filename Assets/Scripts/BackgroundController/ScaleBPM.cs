@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ScaleBPM : MonoBehaviour
 {
+
+    public bool title = false;
     [Header("gestion de l'animation")]
     public Vector3 minScale;
     public Vector3 maxScale;
@@ -16,6 +18,7 @@ public class ScaleBPM : MonoBehaviour
     public int durationPause = 2;
     public bool havePause = false;
     bool state = false;
+
 
     private bool isStarted = false;
     void Start()
@@ -34,7 +37,12 @@ public class ScaleBPM : MonoBehaviour
             isStarted = true;
             StartCoroutine(PauseLOL());
         }
-            
+        
+        if (title == true)
+        {
+            isStarted = true;
+            StartCoroutine(PauseLOL2());
+        }
 
     }
 
@@ -74,6 +82,35 @@ public class ScaleBPM : MonoBehaviour
             baseValue = Mathf.Sin((Time.time * Mathf.PI) * (bpm * 2 / 60f)) * speed;
             transform.localScale = Vector3.Lerp(minScale, maxScale, baseValue);
             yield return null;
+        }
+
+        yield return null;
+    }
+
+    public IEnumerator PauseLOL2()
+    {
+        if (transform.localScale == minScale && !state && havePause)
+        {
+            //cette partie est pour la "pause" pour l'animation.
+            //!\\ ne fonctionne pas encore. Il frise
+            transform.localScale = minScale;
+            yield return new WaitForSeconds(durationPause);
+            //baseValue =-2f;
+            state = true;
+
+
+        }
+        else
+        {
+            baseValue = Mathf.Sin((Time.time * Mathf.PI) * (bpm * 2 / 60f)) * speed;
+            transform.localScale = Vector3.Lerp(minScale, maxScale, baseValue);
+            yield return null;
+        }
+
+
+        if (state)
+        {
+            state = false;
         }
 
         yield return null;

@@ -219,6 +219,8 @@ MonoBehaviour:
     type: 3}
   Entracte2: {fileID: 2788152022668270333, guid: 981e056b223c2d34ea05b983c7f5496c,
     type: 3}
+  bg2: {fileID: 3845518354523144456, guid: 9af14edc936fde34e8572539dbfc2f81, type: 3}
+  bg3: {fileID: 3912358152401639455, guid: d88ac603840a41f439e0a5a8e0a95e5e, type: 3}
   gameMultiplier: 155
   endLevelWaitTime: 0.5
 --- !u!82 &9384867
@@ -423,7 +425,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -566,7 +568,12 @@ MonoBehaviour:
   - {fileID: 0}
   clip:
   - {fileID: 0}
-  audioClipPlay: 000000000000000000000000000000000000000000000000000000000000000000000000
+  - {fileID: 8300000, guid: 68953d6163f244347b433994c4929701, type: 3}
+  - {fileID: 8300000, guid: fa7cf932d6797bf44a8be706b46f0a85, type: 3}
+  - {fileID: 8300000, guid: bcfbaceb14fd34e45b8fe1480ca8ecbd, type: 3}
+  - {fileID: 8300000, guid: 2f79ddd3634dbec48b0740babd1699e2, type: 3}
+  - {fileID: 8300000, guid: 2913d8700811fbe4bbb4e558e62eb74f, type: 3}
+  audioClipPlay: 000000000000000001000000020000000300000000000000040000000500000000000000
   audioClipStop: 000000000000000000000000000000000000000000000000000000000000000000000000
   popSpeed: 1
   popScale: {x: 2, y: 2, z: 0}
@@ -810,108 +817,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962845155}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1052861542
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1052861544}
-  - component: {fileID: 1052861543}
-  m_Layer: 0
-  m_Name: BackgroundController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1052861543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052861542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1ca0679bf733164db0d96fa84b0a978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Background1: {fileID: 5953717744023609527, guid: d1b30ab63cbbb744aa29ae6668394677,
-    type: 3}
-  background1OffsetX: 0
-  background1OffsetY: 0
-  Background2: {fileID: 0}
-  background2OffsetX: 0
-  background2OffsetY: 0
-  Background3: {fileID: 0}
-  background3OffsetX: 0
-  background3OffsetY: 0
-  BackgroundElement1: {fileID: 0}
-  backgroundElement1OffsetX: 0
-  backgroundElement1OffsetY: 0
-  BackgroundElement2: {fileID: 853937731108740208, guid: 250b32dd76d2d6d4983caecca43f7183,
-    type: 3}
-  backgroundElement2OffsetX: 0
-  backgroundElement2OffsetY: 0
-  BackgroundElement3: {fileID: 0}
-  backgroundElement3OffsetX: 0
-  backgroundElement3OffsetY: 0
-  BackgroundElement4: {fileID: 5127291121183933328, guid: 6244573db7ce738449daa346c966180c,
-    type: 3}
-  backgroundElement4OffsetX: 1
-  backgroundElement4OffsetY: 2
-  BackgroundElement5: {fileID: 0}
-  backgroundElement5OffsetX: 0
-  backgroundElement5OffsetY: 0
-  MiddlegoundElement1: {fileID: 6477716686668508029, guid: 9fc7b3c1106d5b24db059b14d387f645,
-    type: 3}
-  MiddlegoundElement1OffsetX: 0.8
-  MiddlegoundElement1OffsetY: -1.8
-  MiddlegoundElement2: {fileID: 0}
-  MiddlegoundElement2OffsetX: 0
-  MiddlegoundElement2OffsetY: 0
-  MiddlegoundElement3: {fileID: 4902140602249314707, guid: 19855acccb21aae4db6301271797b523,
-    type: 3}
-  MiddlegoundElement3OffsetX: 0
-  MiddlegoundElement3OffsetY: -1.8
-  Foreground: {fileID: 3922130891831791542, guid: 432ac1721f5d49747a0c6d3ef60fc4fd,
-    type: 3}
-  ForegroundOffsetX: 0
-  ForegroundOffsetY: 0
-  ForegroundElement1: {fileID: 3108083535596821764, guid: 77cccb266357ea844b84a8f99bae66f9,
-    type: 3}
-  ForegroundElement1OffsetX: 1
-  ForegroundElement1OffsetY: 0
-  ForegroundElement2: {fileID: 0}
-  ForegroundElement2OffsetX: 0
-  ForegroundElement2OffsetY: 0
-  ForegroundElement3: {fileID: 0}
-  ForegroundElement3OffsetX: 0
-  ForegroundElement3OffsetY: 0
-  ForegroundElement4: {fileID: 7308673128133636142, guid: 9328133267262144fa6e724fe2dc162a,
-    type: 3}
-  ForegroundElement4OffsetX: 0
-  ForegroundElement4OffsetY: -0.5
-  ForegroundElement5: {fileID: 0}
-  ForegroundElement5OffsetX: 0
-  ForegroundElement5OffsetY: 0
---- !u!4 &1052861544
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052861542}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1214299226
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,7 +861,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7cc6be4959c57cd4aae37d2d73136ef0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.501
+  m_Volume: 0.154
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1270,3 +1175,77 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855733010}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &3912358152783379577
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3912358152401639455, guid: d88ac603840a41f439e0a5a8e0a95e5e,
+        type: 3}
+      propertyPath: m_Name
+      value: BackgroundController
+      objectReference: {fileID: 0}
+    - target: {fileID: 3912358152401639455, guid: d88ac603840a41f439e0a5a8e0a95e5e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3912358152401639441, guid: d88ac603840a41f439e0a5a8e0a95e5e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3912358152401639441, guid: d88ac603840a41f439e0a5a8e0a95e5e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3912358152401639441, guid: d88ac603840a41f439e0a5a8e0a95e5e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3912358152401639441, guid: d88ac603840a41f439e0a5a8e0a95e5e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3912358152401639441, guid: d88ac603840a41f439e0a5a8e0a95e5e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3912358152401639441, guid: d88ac603840a41f439e0a5a8e0a95e5e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3912358152401639441, guid: d88ac603840a41f439e0a5a8e0a95e5e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3912358152401639441, guid: d88ac603840a41f439e0a5a8e0a95e5e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3912358152401639441, guid: d88ac603840a41f439e0a5a8e0a95e5e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3912358152401639441, guid: d88ac603840a41f439e0a5a8e0a95e5e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3912358152401639441, guid: d88ac603840a41f439e0a5a8e0a95e5e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d88ac603840a41f439e0a5a8e0a95e5e, type: 3}

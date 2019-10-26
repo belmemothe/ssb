@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleLevel/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Niveau Arthur/Niveau Arthur.unity
+    guid: f692e5fe90315d740b174637a0301f17
   m_configObjects: {}

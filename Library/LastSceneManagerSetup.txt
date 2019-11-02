@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Menu/Menu.unity
+- path: Assets/Scenes/Niveau Arthur/Niveau Arthur.unity
   isLoaded: 1
   isActive: 1

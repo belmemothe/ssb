@@ -44,6 +44,7 @@ public class Cinematiccontroller : MonoBehaviour {
     private int transitionAdvancement = 0;
     private int phaseAdvancement = 0;
     private bool firstPlay = true;
+    private bool played = false;
 
     public float popSpeed = 1f;
     public Vector3 popScale = new Vector3(2, 2, 0);
@@ -66,21 +67,23 @@ public class Cinematiccontroller : MonoBehaviour {
         Drawingcontroller.cinematicFinished = false;
 
 
-        for (int i = 0; (transitionAdvancement - phaseAdvancement) < phaseHop[phaseAdvancement]; i++)
-        {
-            NextPhase(transitionType[transitionAdvancement], phase[transitionAdvancement]);
-            transitionAdvancement++;
-        }
-        phaseAdvancement = transitionAdvancement;
-
-        if (audioClipStop[transitionAdvancement] != 0)
+        if (audioClipStop[0] != 0)
         {
             audioSource.Stop();
         }
-        if ( audioClipPlay[transitionAdvancement] != 0)
+        if (audioClipPlay[0] != 0)
         {
-            audioSource.PlayOneShot(clip[audioClipPlay[transitionAdvancement]], 1f);
+            audioSource.PlayOneShot(clip[audioClipPlay[0]], 1f);
+            
         }
+
+        for (int i = 0; (transitionAdvancement - phaseAdvancement) < phaseHop[phaseAdvancement]; i++)
+        {
+            NextPhase(transitionType[transitionAdvancement], phase[transitionAdvancement]);
+            
+            transitionAdvancement++;
+        }
+        phaseAdvancement = transitionAdvancement;
         
     }
 
@@ -89,11 +92,23 @@ public class Cinematiccontroller : MonoBehaviour {
     {
         if (!entracte)
         {
-
+            
 
 
             if ((Input.GetMouseButtonDown(0) && Drawingcontroller.cinematicFinished == false))// && isTimer[transitionAdvancement] == false) ^ (freezeTime > waitTime))
             {
+                if (!played && (transitionAdvancement) < phase.Length)
+                {
+                    if (audioClipStop[transitionAdvancement] != 0)
+                    {
+                        audioSource.Stop();
+                    }
+                    if (audioClipPlay[transitionAdvancement] != 0)
+                    {
+                        audioSource.PlayOneShot(clip[audioClipPlay[transitionAdvancement]], 1f);
+                    }
+                    played = true;
+                }
 
                 if (transitionAdvancement >= phase.Length)
                 {
@@ -132,7 +147,7 @@ public class Cinematiccontroller : MonoBehaviour {
                     {
                         Destroy(GameObject.Find(destroyWho3[transitionAdvancement].name + "(Clone)"));
                     }
-
+                    /*
                     if (firstPlay)
                     {
 
@@ -159,7 +174,7 @@ public class Cinematiccontroller : MonoBehaviour {
                         {
                             audioSource.PlayOneShot(clip[audioClipPlay[transitionAdvancement]], 1f);
                         }
-                    }
+                    }*/
 
                     for (int i = 0; (transitionAdvancement - phaseAdvancement) < phaseHop[phaseAdvancement]; i++)
                     {
@@ -168,6 +183,7 @@ public class Cinematiccontroller : MonoBehaviour {
                         transitionAdvancement++;
                     }
                     phaseAdvancement = transitionAdvancement;
+                    played = false;
 
 
 
